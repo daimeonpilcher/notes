@@ -10,9 +10,13 @@ end
 wyatt = Student.new#("Wyatt", "ruby")
 
 class Car(color)
+	@@car_count = 0
 	def initialize(color)	# use this to add any additional attributes	
 		@color = color
-		@@Cars = 1++
+		@@car_count =+ 1
+	end
+	def get_car_count
+		@@car_count
 	end
 	def drive			# internal function call
 		p "Driving"
@@ -28,9 +32,6 @@ class Car(color)
 	#getter
 	def name
 		@name
-	end
-	def cars?
-		@@Cars
 	end
 
 end
